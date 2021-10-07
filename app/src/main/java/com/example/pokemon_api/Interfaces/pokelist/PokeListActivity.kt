@@ -1,4 +1,4 @@
-package com.example.pokemon_api.ui.pokelist
+package com.example.pokemon_api.Interfaces.pokelist
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,7 +7,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.pokemon_api.R
-import com.example.pokemon_api.ui.pokeinfo.PokeInfoActivity
+import com.example.pokemon_api.Interfaces.pokeinfo.PokeInfoActivity
 import kotlinx.android.synthetic.main.activity_pokelist.*
 
 class PokeListActivity : AppCompatActivity() {

@@ -1,10 +1,10 @@
-package com.example.pokemon_api.ui.pokelist
+package com.example.pokemon_api.Interfaces.pokelist
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.pokemon_api.model.api.PokeApiResponse
 import com.example.pokemon_api.model.api.PokeResult
-import com.example.pokemon_api.service.PokeApiService
+import com.example.pokemon_api.service.Servicio
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -17,12 +17,12 @@ class PokeListViewModel(): ViewModel() {
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
-    private val service: PokeApiService = retrofit.create(PokeApiService::class.java)
+    private val service: Servicio = retrofit.create(Servicio::class.java)
 
     val pokemonList = MutableLiveData<List<PokeResult>>()
 
     fun getPokemonList(){
-        val call = service.getPokemonList(100,0)
+        val call = service.getPokemonList(20,0)
 
         call.enqueue(object : Callback<PokeApiResponse>{
             override fun onResponse(call: Call<PokeApiResponse>,response: Response<PokeApiResponse>) {
@@ -45,7 +45,7 @@ class PokeListViewModel(): ViewModel() {
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
-    private val service: PokeApiService = retrofit.create(PokeApiService::class.java)
+    private val service: Servicio = retrofit.create(Servicio::class.java)
     val pokemonList = MutableLiveData<List<PokeResult>>()
 
     fun getPokemonList(){

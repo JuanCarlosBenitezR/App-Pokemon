@@ -1,4 +1,4 @@
-package com.example.pokemon_api.ui.pokeinfo
+package com.example.pokemon_api.Interfaces.pokeinfo
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -27,11 +27,15 @@ class PokeInfoActivity : AppCompatActivity(){
         viewModel.getPokemonInfo(id)
 
         viewModel.pokemonInfo.observe(this, Observer { pokemon ->
-            nameTextView.text = pokemon.name
-            heightText.text = "Altura: ${pokemon.height/10.0}m"
-            weightText.text = "Peso: ${pokemon.weight/10.0}"
+            nombreTxt.text = pokemon.name
+            Especietxt.text = "Especie: ${pokemon.especie.Especie1}"
+            XpText.text ="Experiencia: ${pokemon.experience}"
+            TamanioTxt.text = "Altura: ${pokemon.height/10.0} m"
+            PesoTxt.text = "Peso: ${pokemon.weight/10.0} kg"
 
-            Glide.with(this).load(pokemon.sprites.frontDefault).into(imageView)
+
+            Glide.with(this).load(pokemon.sprites.frontDefault).into(imgPokemon)
+           // Glide.with(this).load(pokemon.sprites.frontDefault).into((ImgLista))
         })
     }
 }

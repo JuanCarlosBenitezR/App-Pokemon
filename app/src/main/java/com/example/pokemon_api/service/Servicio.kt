@@ -7,7 +7,7 @@ import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
 
-interface PokeApiService {
+interface Servicio {
     @GET("pokemon/{id}")
     fun getPokemonInfo(@Path("id") id: Int): Call<Pokemon>
     @GET("pokemon")

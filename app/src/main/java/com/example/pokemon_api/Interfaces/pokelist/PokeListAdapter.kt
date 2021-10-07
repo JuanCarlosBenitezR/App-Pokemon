@@ -1,4 +1,4 @@
-package com.example.pokemon_api.ui.pokelist
+package com.example.pokemon_api.Interfaces.pokelist
 
 import android.view.LayoutInflater
 import android.view.View
@@ -17,7 +17,7 @@ class PokeListAdapter (val pokemonClick: (Int) -> Unit): RecyclerView.Adapter<Po
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SearchViewHolder {
-        return SearchViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.card_pokemon_search, parent,false))
+       return SearchViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.card_pokemon_search, parent,false))
     }
 
     override fun getItemCount(): Int {
@@ -26,7 +26,16 @@ class PokeListAdapter (val pokemonClick: (Int) -> Unit): RecyclerView.Adapter<Po
 
     override fun onBindViewHolder(holder: SearchViewHolder, position: Int) {
         val pokemon = pokemonList[position]
+      //  val direccion="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/" + pokemon +".png"
+
         holder.itemView.pokemonText.text = "#${position + 1} - ${pokemon.name}"
+
+
+
+
+
+
+
 
         holder.itemView.setOnClickListener { pokemonClick(position + 1) }
     }

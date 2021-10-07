@@ -1,9 +1,9 @@
-package com.example.pokemon_api.ui.pokeinfo
+package com.example.pokemon_api.Interfaces.pokeinfo
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.pokemon_api.model.api.Pokemon
-import com.example.pokemon_api.service.PokeApiService
+import com.example.pokemon_api.service.Servicio
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -16,7 +16,7 @@ class PokeInfoViewModel(): ViewModel(){
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
-    private val service: PokeApiService = retrofit.create(PokeApiService::class.java)
+    private val service: Servicio = retrofit.create(Servicio::class.java)
 
     val pokemonInfo = MutableLiveData<Pokemon>()
 
@@ -43,7 +43,7 @@ class PokeInfoViewModel(): ViewModel(){
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
-    private val service: PokeApiService =retrofit.create(PokeApiService::class.java)
+    private val service: Servicio =retrofit.create(Servicio::class.java)
 
     val pokemonInfo = MutableLiveData<Pokemon>()
 

@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
     <TextView
-        android:id="@+id/nameTextView"
+        android:id="@+id/nombreTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -15,23 +15,23 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="Pokemon Name" />
+        tools:text="Nombre" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imgPokemon"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:adjustViewBounds="true"
-        android:background="@android:color/holo_blue_dark"
+        android:background="@color/teal_200"
         android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameTextView"
+        app:layout_constraintTop_toBottomOf="@+id/nombreTxt"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
-        android:id="@+id/heightText"
+        android:id="@+id/Especietxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -40,19 +40,42 @@
         android:textColor="@android:color/black"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        tools:text="Altura: 1m" />
-
+        app:layout_constraintTop_toBottomOf="@+id/imgPokemon"
+        tools:text="Especie" />
     <TextView
-        android:id="@+id/weightText"
+        android:id="@+id/TamanioTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
+        android:layout_marginTop="8dp"
         android:textColor="@android:color/black"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/heightText"
-        tools:text="Peso: 1kg" />
+        app:layout_constraintTop_toBottomOf="@+id/XpText"
+        tools:text="Altura" />
+
+    <TextView
+        android:id="@+id/PesoTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TamanioTxt"
+        tools:text="Peso" />
+
+    <TextView
+        android:id="@+id/XpText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Especietxt"
+        tools:text="Experiencia base" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
